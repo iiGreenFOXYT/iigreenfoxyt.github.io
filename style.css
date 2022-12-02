@@ -278,7 +278,8 @@ footer{
   align-items: center;
   border-style:solid;
   border-color: #00ff00;
-  border-width: 12px;
+  border-width: 8px;
+  border-top-right-radius: 90px;
 }
 
 .footer-title{
