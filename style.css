@@ -352,10 +352,10 @@ footer .social-iccons i:hover{
 }
 @media only screen and (max-width: 798px) {
   .blog-bar{
-    width: 480px;
+    width: 380px;
   }
   .supimg{
-    width: 450px;
+    width: 350px;
   }
   .footer{
     border-radius: 0px;
