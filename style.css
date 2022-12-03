@@ -352,17 +352,17 @@ footer .social-iccons i:hover{
 }
 @media only screen and (max-width: 430px) {
   .blog-bar{
-    width: 280px;
+    width: 295px;
   }
   .supimg{
-    width: 250px;
+    width: 265px;
   }
   .footer{
     border-radius: 0px;
     margin: auto;
   }
   header {
-    width: 290px;
+    width: 295px;
     margin: auto;
   }
 }
