@@ -349,15 +349,15 @@ footer .social-iccons i:hover{
 
 @media only screen and (max-width: 430px) {
   .blog-bar{
-    width: 330px;
+    width: 337px;
     margin: 5px;
   }
   .maintit{
     font-size:20px;
   }
   .supimg{
-    width: 330px;
-    margin-left: -15px;
+    width: 337px;
+    margin-left: -15,15px;
     height: 230px;
   }
   .footer{
