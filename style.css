@@ -198,7 +198,6 @@ article {
 header {
     background-image: linear-gradient(to top,#00bd3f,#6db100);
     padding-top: 100px;
-    border-top-right-radius: px;
     border-bottom-right-radius: 90px;
     border-bottom-left-radius: 90px;
     padding-bottom:100px;
@@ -365,7 +364,7 @@ footer .social-iccons i:hover{
     margin: auto;
   }
   header {
-    width: 330px;
+    width: 336px;
     margin: auto;
   }
 }
