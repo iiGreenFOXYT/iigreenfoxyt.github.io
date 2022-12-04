@@ -346,6 +346,21 @@ footer .social-iccons i:hover{
   margin: 16px;
 }
 
+.info-bx {
+  background-image: linear-gradient(to left,#00be3f,#79c400);
+  width: 1000px;
+  height: 400px;
+  border-bottom-right-radius: 60px;
+}
+.texts {
+  padding: 10px
+}
+
+.bximg {
+  width: 80px;
+  border-radius: 20px;
+  float: left;
+}
 @media only screen and (max-width: 430px) {
   .blog-bar{
     width: 337px;
