@@ -272,13 +272,14 @@ social-icons,i:hover {
 footer{
   background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
   color: #ffff;
-  padding: 1em;
+  padding: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: left;
   border-style:solid;
   border-color: #181a18;
-  border-width: 5px;
+  border-width: 2px;
   border-top-right-radius: 90px;
   margin-right: 12px;
 }
@@ -294,11 +295,13 @@ footer{
 
 footer .social-iccons i{
   font-size: 1.3em;
-  padding: 0 12px 0 0;
+  padding: -2px 0 0;
   color: #00ff55;
+  margin-right: 26px;
 }
 footer .social-iccons i:hover{
   color: white;
+  font-size: 1.6em;
   transition: 0.3s;
 }
 
@@ -326,23 +329,36 @@ footer .social-iccons i:hover{
   border-style: inset;
   border-color: #888888;
   border-width: 1px;
-  width: 700px;
+  width: 860px;
   height: auto 15px;
-
-  
 }
-
+.supimg {
+  width: 860px;
+  margin: -16px;
+  height: 540px;
+}
+.maintit {
+  text-align: center;
+  background-color: #181a18;
+  color: #ccc;
+  border-radius:5px;
+}
 .tit {
   margin: 16px;
 }
+
 @media only screen and (max-width: 430px) {
   .blog-bar{
     width: 330px;
     margin: 5px;
   }
+  .maintit{
+    font-size:20px;
+  }
   .supimg{
-    width: 328px;
+    width: 330px;
     margin-left: -15px;
+    height: 230px;
   }
   .footer{
     border-radius: 0px;
