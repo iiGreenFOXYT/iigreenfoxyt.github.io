@@ -497,6 +497,10 @@ footer .social-iccons i:hover{
     border-radius: 0px;
     margin: auto;
   }
+  .Footblog {
+    width: 337px;
+    margin: 5px;
+  }
   header {
     width: 336px;
     margin: auto;
