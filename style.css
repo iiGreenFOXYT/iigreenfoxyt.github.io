@@ -13,7 +13,9 @@
   background: rgb(0, 255, 13);
   border-radius: 2px;
 }
-
+.Con {
+  animation:transitionIn 0.75s;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -21,6 +23,17 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+}
+@keyframes transitionIn {
+  from  {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
 * {
 	font-family: 'Cairo', sans-serif;

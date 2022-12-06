@@ -92,10 +92,10 @@
        
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
           <script  src="function.js"></script>
- <header>
 
- </header>
- 
+ <section class="Con">
+
+ </section>
  <footer class="footer" id="footer">
   <p class="footer-title">Copyright &copy; <span>GreenFOX</span></p>
       <div class="social-iccons">
@@ -203,10 +203,10 @@ ________________________________________________________________________________
        
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
           <script  src="function.js"></script>
- <header>
-    
- </header>
 
+<section class="Con">
+  
+ </section>
  <footer class="footer" id="footer">
   <p class="footer-title">Copyright &copy; <span>GreenFOX</span></p>
       <div class="social-iccons">
