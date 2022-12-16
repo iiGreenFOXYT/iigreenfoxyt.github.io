@@ -219,17 +219,19 @@ header {
     justify-content: center;
     margin-right: 68px;
     margin-left: 50px;
+  height: 190px;
 }
+
 .title,h1{
     line-height: 1.4;
     position: relative;
     font-size: 2rem;
     transitIon:0.75s;
-    font-size: 40px;
+    font-size: 35px;
 }
 .title,h1:hover {
     color: #ffffff;
-    font-size: 45px;
+    font-size: 40px;
 }
 .lrn{
     color: #000000;
