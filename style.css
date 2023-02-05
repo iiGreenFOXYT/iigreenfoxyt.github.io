@@ -274,7 +274,7 @@ article {
   top: 12px;
 }
 .services {
-  background-color: #111111;
+  background-image: linear-gradient(to top,#008f30,#3a9c01);
   height: 310px;
   
 }
