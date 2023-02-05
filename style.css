@@ -238,15 +238,7 @@ article {
     position: relative;
     top: 20px;
 }
-.social-icons,i{
-    color: black;
-    font-size: 18px;
-    transition: 0.2s;
-}
-social-icons,i:hover {
-    color: #ffffff;
-    font-size: 24px;
-}
+
 .title-bx {
     background-color: #eeeeee;
     width: 300px;
@@ -281,6 +273,39 @@ social-icons,i:hover {
   position: relative;
   top: 12px;
 }
+.services {
+  background-color: #111111;
+  height: auto;
+  align-items: center;
+  
+}
+.w-tit {
+  background-color: #eeeeee;
+  text-align: center;
+  width: 100px;
+  border-bottom-right-radius: 20px;
+}
+.card {
+  background-color: #ffffff;
+  width: 250px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 16px;
+  transition: 0.4s;
+  height: 200px;
+  display: inline-block;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+  
+.card .icon{
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+
+}
 @media only screen and (max-width: 798px){
   .title-bx {
     width: 200px;
@@ -288,7 +313,7 @@ social-icons,i:hover {
   }
 
   .supject {
-    width: 260px;
+    width: 280px;
     font-size: smaller;
     position: relative;
   }
