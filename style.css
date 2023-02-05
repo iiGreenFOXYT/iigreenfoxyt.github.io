@@ -322,12 +322,12 @@ article {
   }
   .title-bx {
     width: 200px;
-    font-size: small;
+    font-size: medium;
   }
 
   .supject {
     width: 280px;
-    font-size: smaller;
+    font-size: 14px;
     position: relative;
   }
 }
