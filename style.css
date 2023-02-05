@@ -226,7 +226,7 @@ article {
 }
 .cbx{
     background-color: #ffffff;
-    margin: 12px;
+    margin: 16px;
     border-radius: 5px;
     height: 1400px;
     border-width: 2px;
@@ -313,6 +313,9 @@ article {
 
 }
 @media only screen and (max-width: 798px){
+  .cbx {
+    margin: 12px;
+  }
   .services {
     height: auto;
   }
