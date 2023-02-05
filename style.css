@@ -68,7 +68,6 @@ body {
  
 nav {
   float: right;
-  display: flex;
 }
 nav ul {
   list-style: none;
@@ -250,7 +249,7 @@ social-icons,i:hover {
 }
 .title-bx {
     background-color: #eeeeee;
-    width: 200px;
+    width: 300px;
     display: inline-block;
     margin-left: 12px;
     position: relative;
@@ -262,10 +261,11 @@ social-icons,i:hover {
     border-left-style:solid;
     border-right-style:solid;
     border-color:#018020;
+    font-size: large;
 }
 .supject {
     background-color: #eeeeee;
-    width: 360px;
+    width: 700px;
     margin-left: 12px;
     border-radius: 3px;
     text-align: center;
@@ -274,8 +274,22 @@ social-icons,i:hover {
     border-left-style:solid;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-size: large;
 }
 
 .sup-tit{
-    margin: 2px;
+  position: relative;
+  top: 12px;
+}
+@media only screen and (max-width: 798px){
+  .title-bx {
+    width: 200px;
+    font-size: small;
+  }
+
+  .supject {
+    width: 260px;
+    font-size: smaller;
+    position: relative;
+  }
 }
