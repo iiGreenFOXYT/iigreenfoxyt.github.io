@@ -275,8 +275,7 @@ article {
 }
 .services {
   background-color: #111111;
-  height: auto;
-  align-items: center;
+  height: 310px;
   
 }
 .w-tit {
@@ -284,16 +283,23 @@ article {
   text-align: center;
   width: 100px;
   border-bottom-right-radius: 20px;
+  
+}
+
+.crds {
+  align-items: center;
+  display: flex;
 }
 .card {
   background-color: #ffffff;
   width: 250px;
   text-align: center;
   border-radius: 2px;
-  margin: 16px;
+  margin-left: 50px;
   transition: 0.4s;
   height: 200px;
   display: inline-block;
+  
 }
 
 .card:hover {
@@ -307,6 +313,13 @@ article {
 
 }
 @media only screen and (max-width: 798px){
+  .services {
+    height: auto;
+  }
+  .card {
+    margin: 5px;
+    margin-left: 56px;
+  }
   .title-bx {
     width: 200px;
     font-size: small;
