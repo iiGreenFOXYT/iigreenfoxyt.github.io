@@ -83,7 +83,7 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  color: #ffffff;
+  color: #3ba000;
   text-decoration: none;
   background-color: #262626;
   
@@ -212,16 +212,20 @@ article {
 
 /*Content Style*/
 .banner {
-    height: 180px;
-    background-color:#018020;
+    height: 260px;
+    background-image:url(/assets/bannerg.png);
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     align-items: center;
     text-align: center;
 }
-
+.title {
+  padding-top: 90px;
+  color: #00ff55;
+}
 .dis-title{
     margin-top: -30px;
+    color:#163d00;
 }
 .cbx{
     background-color: #1a1a1a;
@@ -232,7 +236,7 @@ article {
     border-left-style:solid;
     border-right-style:solid;
     border-color:#018020;
-    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.692);
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.226);
 }
 
 
@@ -262,8 +266,8 @@ article {
     height: 70px;
     border-left-color: #018020;
     border-left-style:solid;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 20px;
     font-size: large;
     color: #00b13b;
 }
@@ -322,6 +326,10 @@ article {
   color: white;
   border-bottom-left-radius: 0px;
   border-top-right-radius: 0px; 
+  border-color: #1a1a1a;
+  border-bottom-style:solid;
+  border-left-style:solid;
+  border-width: 5px;
   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
 }
 .Footer .ftr-title{
