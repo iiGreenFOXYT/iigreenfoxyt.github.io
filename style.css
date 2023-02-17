@@ -18,7 +18,7 @@
 }
 html {
   scroll-behavior: smooth;
-  background-color: #eeeeee;
+  background-color: #163d00;
 }
 
 body {
@@ -224,7 +224,7 @@ article {
     margin-top: -30px;
 }
 .cbx{
-    background-color: #ffffff;
+    background-color: #1a1a1a;
     margin: 28px;
     border-radius: 5px;
     height: 1400px;
@@ -232,6 +232,7 @@ article {
     border-left-style:solid;
     border-right-style:solid;
     border-color:#018020;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.692);
 }
 
 
@@ -295,6 +296,7 @@ article {
   transition: 0.4s;
   height: 200px;
   display: inline-block;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
 }
 
 .card:hover {
@@ -307,7 +309,28 @@ article {
   text-align: center;
 
 }
+.Footer {
+  background-color: #262626;
+  height: 80px;
+  margin: 26px;
+  border-radius: 10px;
+  color: white;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px; 
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+.Footer .ftr-title{
+  margin-left: 6px;
+  text-align: center;
+}
+.Footer span{
+  color: #008f30;
+}
 @media only screen and (max-width: 498px){
+  .Footer {
+    font-size: small;
+
+  }
   .cbx {
     margin: 12px;
   }
