@@ -342,8 +342,8 @@ article {
 @media only screen and (max-width: 498px){
   .Footer {
     font-size: small;
-
-  }
+    margin: 12px;
+    }
   .cbx {
     margin: 12px;
   }
