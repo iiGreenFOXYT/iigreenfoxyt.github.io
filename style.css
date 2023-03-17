@@ -170,9 +170,7 @@ nav ul li ul li a {
 
 }
 @media screen and (min-width: 799px) {
-  .title {
-    display: flex;
-  }
+
 
   .nav-list {
     display: block !important;
