@@ -302,25 +302,34 @@ article {
   display: block;
 }
 
-.crds {
-  align-items: center;
-  margin-left: 120px;
+.crds { 
+  align-items: center; margin-left: 120px; 
 }
 
-.bx {
-  display: inline-block;
-  background-color: #ffffff;
-  list-style: none;
-  height: 190px;
-  width: 220px;
-  margin:14px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.014);
+.bx { 
+  display: inline-block; 
+  background-color: #ffffff; 
+  list-style: none; 
+  height: 190px; 
+  width: 220px; 
+  margin:14px; 
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.014); 
   text-align: center
+ }
+
+.bx:hover {
+  transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
 }
 
 .bx li a{
   font-size:50px; 
   color: #1ba000;
+}
+.bx li a :hover {
+  transition: 0.3s;
+  color: #03db4b;
+  font-size: 55px;
 }
 .bx-dis {
   margin-top: -19px;
