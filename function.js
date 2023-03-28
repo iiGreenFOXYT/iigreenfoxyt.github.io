@@ -17,4 +17,5 @@
     }); 
   })(jQuery);
 
-  //This is Dark Mode Buttom
+
+  //lang auto//

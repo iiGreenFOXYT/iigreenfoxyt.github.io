@@ -220,6 +220,34 @@ article {
   margin: 0 auto;
   padding: 10px;
 }
+.Lang {
+  display: flex;
+  justify-content: center;
+
+}
+.RE {
+  display: flex;
+  justify-content: center;
+  margin-top: 18rem;
+}
+.lg-bx {
+  background-color: white;
+  text-align: center;
+  width: 140px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.062);
+  margin: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 5px;
+  
+}
+
+
+.Lang :hover {
+  transition: 0.5s;
+
+  background-color: #1ba000;
+}
 
 /*Content Style*/
 
@@ -312,7 +340,7 @@ article {
 .bx { 
   background-color: #ffffff; 
   list-style: none; 
-  height: 190px; 
+  height: 207px; 
   width: 220px; 
   margin:14px; 
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.014); 
