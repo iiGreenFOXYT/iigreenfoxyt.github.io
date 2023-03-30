@@ -16,10 +16,3 @@
       });
     }); 
   })(jQuery);
-
-
-
-  const firebaseConfig = {
-  };
-  firebase.initializeApp(firebaseConfig);
-  const analytics = firebase.analytics();

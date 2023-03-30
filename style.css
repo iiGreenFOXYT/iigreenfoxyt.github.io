@@ -342,10 +342,7 @@ article {
 }
 
 
-.content {
-  height: 890px;
-  justify-content: center;
-}
+
 .crds { 
   justify-content: center;
   display:flex;
