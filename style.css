@@ -11,10 +11,9 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgb(0, 160, 8);
-  border-radius: 2px;
 }
 .brand {
-  animation:transitionIn 0.5s;
+  animation:transitionIn 0.7s;
 }
 html {
   scroll-behavior: smooth;
@@ -22,10 +21,24 @@ html {
 }
 
 body {
+  animation:transitionIn 0.5s;
 	margin: 0;
 	padding: 0;
 }
 @keyframes transitionIn {
+  from  {
+    opacity: 0;
+    transform: rotateX(-12deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+
+@keyframes transitionOut {
   from  {
     opacity: 0;
     transform: rotateX(-12deg);
@@ -111,6 +124,7 @@ nav ul li ul li a {
 }
  
 .nav-dropdown {
+  animation:transitionIn 0.7s;
   position: absolute;
   display: none;
   z-index: 1;

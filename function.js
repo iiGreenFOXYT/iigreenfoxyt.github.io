@@ -18,4 +18,8 @@
   })(jQuery);
 
 
-  //lang auto//
+
+  const firebaseConfig = {
+  };
+  firebase.initializeApp(firebaseConfig);
+  const analytics = firebase.analytics();
