@@ -462,7 +462,7 @@ section.vortix {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #181515;
+  background: radial-gradient(circle at left center, rgb(0, 19, 71), rgb(37, 37, 35));
   color: white;
   height: 300px;
 }
@@ -508,17 +508,25 @@ section.vortix {
 .vortix .note {
   font-size: small;
 }
-
+#ar {
+  width: 700px;
+  position: relative;
+  left:10rem;
+}
 /* أنماط الهاتف المحمول (Mobile Styles) */
-@media only screen and (max-width: 498px) {
+@media screen and (max-width: 498px) {
   .banner {
     align-items: center;
-    height: 400px;
+    height: 410px;
     background-color: #dbdbdb;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
-
+  #ar {
+    position: unset;
+    width: 75%;
+  
+  }
   .title {
     margin: 3rem;
     width: 75%;
@@ -542,6 +550,7 @@ section.vortix {
   section.vortix {
     height: auto;
     display: block;
+    background: radial-gradient(circle at top center, rgb(0, 19, 71), rgb(37, 37, 35));
   }
 
   .vortix-description p {
