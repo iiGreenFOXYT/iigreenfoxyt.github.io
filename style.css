@@ -578,7 +578,7 @@ section.vortix {
 
 /* أنماط القدم (Footer Styles) */
 footer {
-  background-color: #000;
+  background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(37, 37, 35));
   color: #dbdbdb;
   display: grid;
   text-align: center;
