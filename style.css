@@ -333,6 +333,10 @@ article {
 
 .bx .details {
   display: none;
+  transition: 0.3s; 
+}
+
+.bx:hover .details {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -344,10 +348,6 @@ article {
   font-size: 11;
   color: white;
   height:198px;
-  
-}
-
-.bx:hover .details {
   display: block;
 }
 
