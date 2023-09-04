@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $email_message, $headers)) {
-        echo "Thank you for contacting us! We will get back to you soon.";
+        echo "Thank you for contacting me! We will get back to you soon.";
     } else {
         echo "Oops! Something went wrong. Please try again later.";
     }
