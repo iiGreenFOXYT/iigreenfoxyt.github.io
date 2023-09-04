@@ -372,8 +372,7 @@ article {
 /* أنماط وسائل التواصل الاجتماعي */
 .social {
   position: fixed;
-  top: 220px;
-  width: 59px;
+  top: 100px;
 }
 
 .social ul {
@@ -385,11 +384,11 @@ article {
   display: block;
   margin: 5px;
   background: rgba(0, 0, 0, 0.36);
-  width: 300px;
+  width: 299px;
   text-align: right;
   padding: 10px;
   border-radius: 0 30px 30px 0;
-  transition: all 1s;
+  transition: all 0.8s;
 }
 
 .social ul li:hover {
@@ -521,10 +520,10 @@ section.vortix {
   }
 
   .title {
-    margin: 4rem;
-    width: 65%;
-    font-size: 15px;
-    margin-top: 5rem;
+    margin: 3rem;
+    width: 75%;
+    font-size: 16px;
+    margin-top: 4rem;
   }
 
   .headt {
@@ -536,8 +535,8 @@ section.vortix {
   }
 
   .crds {
-    display: block;
-    margin-left: 4rem;
+    display:grid;
+    margin: auto;
   }
 
   section.vortix {
