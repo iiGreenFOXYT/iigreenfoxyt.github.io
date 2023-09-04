@@ -369,6 +369,60 @@ article {
 }
 
 
+/* Contact */
+
+
+.contact {
+  background-color: #1f201f;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #3a7900;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #004296;
+}
+
 /* أنماط وسائل التواصل الاجتماعي */
 .social {
   position: fixed;
@@ -571,6 +625,10 @@ section.vortix {
     margin: 10px;
     padding-top: 30px ;
     text-align: center;
+  }
+
+  .contact {
+    margin: 5px;
   }
   footer {
     font-size: small;
