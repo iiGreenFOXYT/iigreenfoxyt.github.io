@@ -372,56 +372,6 @@ article {
 /* Contact */
 
 
-.contact {
-  background-color: #1f201f;
-  color: white;
-  padding: 50px 0;
-  text-align: center;
-  margin: 0;
-}
-
-.contact-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contact h2 {
-  font-size: 28px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button[type="submit"] {
-  background-color: #3a7900;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #004296;
-}
 
 /* أنماط وسائل التواصل الاجتماعي */
 .social {
@@ -626,10 +576,6 @@ section.vortix {
     padding-top: 30px ;
     text-align: center;
   }
-
-  .contact {
-    margin: 5px;
-  }
   footer {
     font-size: small;
   }
@@ -639,11 +585,19 @@ section.vortix {
 footer {
   background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(37, 37, 35));
   color: #dbdbdb;
-  display: grid;
-  text-align: center;
+  display:flex;
   font-size: 12px;
+  justify-content: space-between;
+  padding: 10px;
 }
 
+footer h2 {
+  color:white;
+  transition: 0.5s; 
+}
+footer h2:hover {
+  color: #00b13b;
+}
 footer span {
   color: #1ba000;
 }
