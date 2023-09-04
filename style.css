@@ -372,7 +372,8 @@ article {
 /* أنماط وسائل التواصل الاجتماعي */
 .social {
   position: fixed;
-  top: 100px;
+  top: 98px;
+  z-index: 999;
 }
 
 .social ul {
