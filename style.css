@@ -1,7 +1,7 @@
-/* إضافة الخطاف إلى الخط الأول لاستيراد الخطوط */
+
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600&display=swap');
 
-/* أنماط قضيب التمرير (السكروم) */
+/*  scroll */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -14,12 +14,12 @@
   background: rgb(0, 160, 8);
 }
 
-/* أنماط العلامة التجارية (Brand) */
+/* (Brand) */
 .brand {
   animation: transitionIn 0.7s;
 }
 
-/* أنماط الصفحة */
+/* page  */
 html {
   scroll-behavior: smooth;
   background-color: #f0f0f0;
@@ -31,7 +31,7 @@ body {
   padding: 0;
 }
 
-/* أنماط الانتقال (Transitions) */
+/* (Transitions) */
 @keyframes transitionIn {
   from {
     opacity: 0;
@@ -56,12 +56,12 @@ body {
   }
 }
 
-/* أنماط الخطوط (Fonts) */
+/* (Fonts) */
 * {
   font-family: 'Cairo', sans-serif;
 }
 
-/* أنماط شريط التنقل (Navbar) */
+/* (Navbar) */
 .nav-bar {
   background-color: transparent;
   position: fixed;
@@ -105,7 +105,7 @@ body {
   text-decoration: none;
 }
 
-/* أنماط شريط التنقل (Navbar) */
+/*(Navbar) */
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -156,7 +156,7 @@ nav ul li ul li a {
   line-height: 20px;
 }
 
-/* أنماط القائمة المنسدلة (Dropdown) */
+/* (Dropdown) */
 .nav-dropdown {
   animation: transitionIn 0.7s;
   position: absolute;
@@ -166,7 +166,7 @@ nav ul li ul li a {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* أنماط النقطة الصغيرة للهاتف المحمول (Mobile Toggle) */
+/*(Mobile Toggle) */
 .nav-mobile {
   display: none;
   position: absolute;
@@ -229,7 +229,7 @@ nav ul li ul li a {
   }
 }
 
-/* أنماط زر القائمة الجانبية (Mobile Toggle Button) */
+/*(Mobile Toggle Button) */
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -277,43 +277,16 @@ nav ul li ul li a {
   transform: rotate(-45deg);
 }
 
-/* أنماط محتوى الصفحة */
+/* page content */
 article {
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px;
 }
 
-/* أنماط قسم اللغات */
-.Lang {
-  display: flex;
-  justify-content: center;
-}
 
-/* أنماط قسم المصادر */
-.RE {
-  display: flex;
-  justify-content: center;
-  margin-top: 18rem;
-}
 
-.lg-bx {
-  background-color: white;
-  text-align: center;
-  width: 140px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.062);
-  margin: 2rem;
-  align-items: center;
-  margin-top: 2rem;
-  border-radius: 5px;
-}
-
-.Lang :hover {
-  transition: 0.5s;
-  background-color: #1ba000;
-}
-
-/* أنماط الشبكة */
+/* boxs */
 .crds {
   justify-content: center;
   display: flex;
@@ -371,13 +344,11 @@ article {
 
 /* Contact */
 
-
-
-/* أنماط وسائل التواصل الاجتماعي */
 .social {
   position: fixed;
   top: 98px;
-  z-index: 999;
+  z-index: 1;
+  display: unset;
 }
 
 .social ul {
@@ -425,7 +396,7 @@ article {
   transform: rotate(0deg);
 }
 
-/* أنماط بانر (Banner) */
+/* (Banner) */
 .banner {
   align-items: center;
   height: 700px;
@@ -451,7 +422,7 @@ article {
   margin-top: -2rem;
 }
 
-/* أنماط الخدمات (Services) */
+/* (Services) */
 .services {
   background-color: #000;
   color: #fff;
@@ -461,7 +432,7 @@ article {
   margin: 0% auto;
 }
 
-/* أنماط قسم العناصر (Section Vortix) */
+/* (Section Vortix) */
 section.vortix {
   margin-bottom: 12px;
   display: flex;
@@ -518,7 +489,7 @@ section.vortix {
   position: relative;
   left:20rem;
 }
-/* أنماط الهاتف المحمول (Mobile Styles) */
+/*(Mobile Styles) */
 @media screen and (max-width: 498px) {
   .banner {
     align-items: center;
@@ -577,11 +548,18 @@ section.vortix {
     text-align: center;
   }
   footer {
-    font-size: small;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
   }
+
+  footer h2 {
+    margin-top: 10px; 
+  }
+
 }
 
-/* أنماط القدم (Footer Styles) */
+/* (Footer Styles) */
 footer {
   background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(37, 37, 35));
   color: #dbdbdb;
