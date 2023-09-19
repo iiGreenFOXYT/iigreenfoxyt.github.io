@@ -16,8 +16,31 @@
 
 /* (Brand) */
 .brand {
-  animation: transitionIn 0.7s;
+  position: absolute;
+  float: left;
+  margin-left: -60px;
+  background-color: #b4b4b4;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  transition: 0.3s;
 }
+
+.brand:hover {
+  background-color: #b8b8b8;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.brand a img {
+  max-height: 70px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 
 /* page  */
 html {
@@ -79,31 +102,6 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.brand {
-  position: absolute;
-  float: left;
-  margin-left: -60px;
-  background-color: #b4b4b4;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  transition: 0.3s;
-}
-
-.brand:hover {
-  background-color: #b8b8b8;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.brand a img {
-  max-height: 70px;
-}
-
-.brand a,
-.brand a:visited {
-  color: #ffffff;
-  text-decoration: none;
-}
 
 /*(Navbar) */
 .nav-container {
@@ -348,7 +346,7 @@ article {
   position: fixed;
   top: 98px;
   z-index: 1;
-  display: unset;
+  width: 12px;
 }
 
 .social ul {

@@ -21,12 +21,26 @@
 
   window.addEventListener('scroll', function() {
     var header = document.querySelector('.nav-bar');
+    var brand = document.querySelector('.brand');
+  
     if (window.scrollY > 0) {
       header.classList.add('scrolled');
+  
+      // Modify the brand styles here
+      brand.style.backgroundColor = 'transparent';
+      brand.style.borderBottomLeftRadius = '0';
+      brand.style.borderBottomRightRadius = '0';
+  
     } else {
       header.classList.remove('scrolled');
+  
+      // Restore the original brand styles here
+      brand.style.backgroundColor = '#b4b4b4';
+      brand.style.borderBottomLeftRadius = '22px';
+      brand.style.borderBottomRightRadius = '22px';
     }
   });
+  
 
 
  
