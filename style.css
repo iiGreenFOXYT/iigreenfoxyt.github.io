@@ -136,7 +136,8 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  color: #1ba000;
+  color: #ffffff;
+  background-color: #1ba000;
 }
 
 nav ul li a:not(:only-child):after,
