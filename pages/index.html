@@ -35,27 +35,19 @@
     gtag('js', new Date());
     gtag('config', 'G-BQ21S0YQHJ');
   </script>
-<script src="/firebase.js"></script>  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-BQ21S0YQHJ');
-</script>
 <script src="/firebase.js"></script>  
 <script>
-  const userLanguage = navigator.language || navigator.userLanguage;
- 
-  
-  let redirectPage = "index.html"; 
-  
-  if (userLanguage.startsWith("ar")) {
-    redirectPage = "ar.html";
-  } else if (userLanguage.startsWith("en")) {
-    redirectPage = "en.html"; 
-  }
-  
-  window.location.href = redirectPage;</script>
+    const userLanguage = navigator.language || navigator.userLanguage;
+   
+    
+    let redirectPage = "index.html"; 
+    
+    if (userLanguage.startsWith("ar")) {
+      redirectPage = "servicesAr.html";
+    } else if (userLanguage.startsWith("en")) {
+      redirectPage = "servicesEn.html"; 
+    }
+    
+    window.location.href = redirectPage;</script>
 </body>
 </html>

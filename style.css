@@ -162,6 +162,10 @@ nav ul li ul li a {
   z-index: 1;
   background-color: #a8a7a7;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-top: green;
+  border-top-style:solid ;
 }
 
 /*(Mobile Toggle) */
