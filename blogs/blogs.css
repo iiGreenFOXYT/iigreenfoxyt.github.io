@@ -1,46 +1,109 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin-top: 70px;
+  background: #f1f1f1;
+  padding: 20px;
+}
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+  border-radius: 4px;
+
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
   
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border-color:rgb(0, 202, 0) ;
+  border-right-style:solid ;
+}
+
+.blogpost {
+  background-color: white;
+  padding: 10px;
+  min-height: 900px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.blogpost h5 {
+  margin-top: 2px;
+}
+
+.blg-img {
+  max-width: 100%;
+  border: 0.9px solid #ccc;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.void-bx {
+  background-color: rgb(241, 241, 241);
+  width: 260px;
+  border-radius: 12px;
+  height: 200px;
+  text-align: center;
+  color: rgb(90, 90, 90);
+}
+
+.social-links a{
+  color: black;
+  text-decoration: none;
+}
+.social-links ul {
+  list-style: none;
+  padding-left: 0;
+  transition: 0.2s;
+}
+.social-links ul :hover {
+  color:white;
+  background-color: rgb(0, 202, 0);
+  border-radius: 2px;
+  margin-left: 12px;
+  transition: 0.2s;
+}
+
+
+
+
+@media screen and (max-width: 400px) {
   body {
-    font-family: Arial;
-    padding: 75px;
-    background: #f1f1f1;
+    padding: 10px;
   }
-  
-  .leftcolumn {
-    float: left;
-    width: 75%;
-    border-radius: 4px;
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
   }
-  
-
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
+  .blogpost {
+    margin-top: 20px; 
   }
-  
-
+  .blg-img {
+    max-width: 100%;
+    border-radius: 2px;
+  }
+  .void-bx {
+    width: auto;
+  }
   .card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 4px;
+    border-right-style:none ;
+    border-left-style:solid ;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
-  
+}

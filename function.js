@@ -44,3 +44,19 @@
 
 
  
+// Function to calculate reading progress
+function updateReadingProgress() {
+  const post = document.querySelector(".blogpost"); // Adjust the selector to match your blog post container
+  const progressBar = document.getElementById("reading-progress-bar");
+
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollHeight = post.clientHeight - window.innerHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+
+  progressBar.style.width = progress + "%";
+}
+
+// Add an event listener to update the progress as the user scrolls
+window.addEventListener("scroll", updateReadingProgress);
+
+

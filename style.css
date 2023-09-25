@@ -562,6 +562,22 @@ section.vortix {
   }
 
 }
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Height of the progress bar */
+  background-color: #ccc; /* Background color of the progress bar container */
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #00ff0d; /* Color of the progress bar */
+  transition: width 0.2s; /* Transition effect for smooth progress */
+}
 
 /* (Footer Styles) */
 footer {
