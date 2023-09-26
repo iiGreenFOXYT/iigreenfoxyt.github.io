@@ -5,9 +5,9 @@
  let redirectPage = "index.html"; 
  
  if (userLanguage.startsWith("ar")) {
-   redirectPage = "ar.html";
- } else if (userLanguage.startsWith("en")) {
-   redirectPage = "en.html"; 
+   redirectPage = "ar/";
+ } else {
+   redirectPage = "en/"; 
  }
  
  window.location.href = redirectPage;
