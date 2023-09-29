@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: https://github.com/iiGreenFOXYT/iigreenfoxyt.github.io
+media_folder: static/img
+public_folder: /img
+collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
