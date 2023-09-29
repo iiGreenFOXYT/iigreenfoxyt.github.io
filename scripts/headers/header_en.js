@@ -2,6 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const header = `
+  <head>
+    <meta name="google-adsense-account" content="ca-pub-3700656921492222">
+    </head>
     <section class="nav-bar">
       <div class="nav-container">
         <div class="brand">
