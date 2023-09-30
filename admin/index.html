@@ -11,7 +11,14 @@
   <script src="https://unpkg.com/netlify-auth-providers"></script>
 </head>
 <body>
-  
+  <h1>GitHub Authentication Example:</h1>
+  <p><a href="#" id="login">Authenticate</a></p>
+  <p>Token: <span id="output-token">Not authenticated yet</span></p>
+  <p>
+    User emails:
+    <span id="output-email">Not authenticated yet</span>
+  </p>
+
     <script>
        const anchorTag = document.getElementById("login");
       const outputToken = document.getElementById("output-token");
@@ -55,7 +62,5 @@
       }
       </script>
   <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
