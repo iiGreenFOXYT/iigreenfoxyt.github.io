@@ -7,9 +7,10 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <!-- Include the styles for the Netlify CMS UI, after your own styles -->
   <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css" />
-
+  <script type="module" src="node_modules/netlify-cms-app/dist/netlify-cms-app.js"></script>
 </head>
 <body>
+  
     <script>
         if (window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
@@ -23,5 +24,6 @@
       </script>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </body>
 </html>
