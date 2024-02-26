@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     background-color: #000;
     color: #fff;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
   }
   .container {
     background-color: #222;
@@ -59,203 +61,82 @@ body {
     h1 {
       font-size: 24px;
     }
-
+  }
     /* madia player */
 
-    .hidden {
-        display: none;
-      }
-      
-      .player {
-        max-width: 500px;
-        margin: 7rem auto;
-        background: white;
-        padding: 36px 32px 24px 32px;
-        border-radius: 14px;
-        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-      }
-      
-      .player-track-meta {
-        text-align: center;
-      }
-      
-      .player-track-meta p {
-        margin: 0;
-        font-size: 20px;
-        color: #0e0e0e;
-        font-weight: 700;
-      }
-      
-      .player-track-meta span {
-        font-size: 16px;
-        font-weight: 400;
-        padding: 0 2px;
-        position: relative;
-        top: 1px;
-        color: #a3a3a3;
-      }
-      
-      .player-controls {
-        display: flex;
-        align-items: center;
-      }
-      
-      .player-play-btn {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 36px;
-        height: 36px;
-      }
-      
-      .icon-container {
-        fill: transparent;
-        stroke: none;
-      }
-      
-      .player-play-btn:hover {
-        fill: #444444;
-      }
-      
-      .player-play-btn svg { 
-        color: #0e0e0e;
-        position: relative;
-        left: 0.5px;
-        width: 36px;
-        height: 36px;
-        display: block;
-      }
-      
-      .player-play-btn:hover svg {
-        color: #ffffff;
-      }
-      
-      .player-timeline {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 10px;
-      }
-      
-      .player-progress {
-        display: flex;
-        postion: relative;
-        height: 6px;
-        background: #a3a3a3;
-        border-radius: 25px;
-        margin: 0 5px;
-        flex: 10;
-        flex-basis: 100%;
-        overflow: hidden;
-      }
-      
-      .player-progress-filled {
-        height: 6px;
-        background: #0e0e0e;
-        flex: 0;
-        flex-basis: 0%;
-        border-radius: 25px;
-      }
-      
-      .player-time {
-        padding: 2px 5px;
-      }
-      
-      .player-volume-container {
-        width: 15%;
-      }
-      .player-volume {
-        height: 28px;
-        -webkit-appearance: none;
-        margin: 10px 0;
-        width: 100%;
-        background: transparent;
-      }
-      
-      .player-volume:focus {
-        outline: none;
-      }
-      
-      .player-volume::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 6px;
-        cursor: pointer;
-        animate: 0.2s;
-        background: #0e0e0e;
-        border-radius: 10px;
-      }
-      
-      .player-volume::-webkit-slider-thumb {
-        height: 16px;
-        width: 16px;
-        border-radius: 100px;
-        border: none;
-        background: #0e0e0e;
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: -4px;
-      }
-      
-      .player-volume:focus::-webkit-slider-runnable-track {
-        background: #0e0e0e;
-      }
-      
-      .player-volume::-moz-range-track {
-        width: 100%;
-        height: 6px;
-        cursor: pointer;
-        animate: 0.2s;
-        background: #0e0e0e;
-        border-radius: 10px;
-      }
-      
-      .player-volume::-moz-range-thumb {
-        height: 16px;
-        width: 16px;
-        border-radius: 100px;
-        border: none;
-        background: #0e0e0e;
-        cursor: pointer;
-        margin-top: -4px;
-      }
-      
-      .player-volume::-ms-track {
-        width: 100%;
-        height: 6px;
-        cursor: pointer;
-        animate: 0.2s;
-        background: #0e0e0e;
-        border-radius: 10px;
-      }
-      
-      .player-volume::-ms-fill-lower {
-        background: #0e0e0e;
-        border-radius: 10px;
-      }
-      
-      .player-volume::-ms-fill-upper {
-        background: #0e0e0e;
-        border-radius: 10px;
-      }
-      
-      .player-volume::-ms-thumb {
-        margin-top: 1px;
-        height: 15px;
-        width: 15px;
-        border-radius: 5px;
-        border: none;
-        background: #0e0e0e;
-        cursor: pointer;
-      }
-      
-      .player-volume:focus::-ms-fill-lower {
-        background: #38bdf8;
-      }
-      
-      .player-volume:focus::-ms-fill-upper {
-        background: #38bdf8;
-      }
+    
+.greetings {
+  background-color: aliceblue;        
+  color: #000;
+  height: 30px;
+  border-radius: 7px;
+}
+#greetings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0.4rem;
+  position: relative;
+}
+
+.mainContainer {
+  width: 22rem auto;
+  height: 23rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+
+.weatherIcon {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.weatherIcon img {
+  max-width: 100%;
+  width: 8rem;
+}
+
+.cityDetails {
+  color: #323232;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.windDetails {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: space-around;
+}
+
+.windDetails .humidityBox {
+  display: flex;
+  font-size: 1rem;
+  color: #323232;
+  .span{
+    position: relative;
+    right: 2rem;
+  }
+}
+.windDetails .humidityBox img {
+  max-height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.windDetails .windSpeed {
+  display: flex;
+  font-size: 1rem;
+  color: #323232;
+}
+
+.windDetails .windSpeed img {
+  max-height: 2rem;
+  margin-right: 0.5rem;
+}
+.clock {
+  color: #000;
+}

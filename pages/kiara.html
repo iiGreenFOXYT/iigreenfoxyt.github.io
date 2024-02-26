@@ -5,152 +5,138 @@
 <link rel="stylesheet" href="/pages/kiara.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kiara</title>
-
 </head>
 <body>
 <div class="container">
-  <h1>Hello Kiara!</h1>
+  <div class="greetings"><p id="greetings"></p></div>
+  
   <p>this page is specially designed for you ❤</p>
   <div class="message">
     <p>Dear Kiara, I hope you feel better soon. Take care of yourself and know that I'm thinking of you.</p>
-    </div>
-    <div class="player">
-        <div class="player-track-meta">
-          <p>LoverBoy</p>
-          <p><span>A-Wall</span></p>
-        </div>
-        <div class="player-controls">
-          <button class="player-play-btn" 
-                  role="button" 
-                  aria-label="Play"
-                  data-playing="false"
-                  >
-            <div class="player-icon-play">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>play</title><polygon class="icon-play" points="19.05 12 6 3.36 6 20.64 19.05 12"/><rect class="icon-container" width="24" height="24"/></svg>
-              </div>
-            
-            <div class="player-icon-pause hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>pause</title><g><rect  class="icon-pause" x="6" y="3.26" width="4" height="17.48"/><rect class="icon-pause" x="14" y="3.26" width="4" height="17.48"/></g><rect class="icon-container" width="24" height="24"/></svg>
-            </div>
-          </button>
-          <div class="player-timeline">
-            <span class="player-time player-time-current">00:00</span>
-            <div class="player-progress">
-              <div class="player-progress-filled"></div>
-            </div>
-            <span class="player-time player-time-duration">00:00</span>
-          </div>
-          <div class="player-volume-container">
-              <input type="range" id="volume" min="0" max="1" value="1" step="0.01" class="player-volume" />
-          </div>
-        </div>
-        
-        <audio src="/LoverBoyA-Wall.mp3" crossorigin="anonymous" ></audio>
-      </div>
   </div>
 </div>
+
+<div class="mainContainer">
+  <h1 style="text-align: center; color: black; position: relative; border-top-right-radius: 1rem; border-top-left-radius: 1rem; background-color: bisque;">puerto rico weather</h1>
+  <div class="weatherDetails">
+    <div class="weatherIcon">
+      <img src="Images/sun.png" alt="Weather Icon" id="weatherIcon">
+    </div>
+    <div class="cityDetails">
+      <div class="weather" id="weather"></div>
+      <div class="desc" id="desc"></div>
+      <div class="clock" id="clock"></div>
+    </div>
+    <div class="windDetails">
+      <div class="humidityBox">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgr7XehXJkOPXbZr8xL42sZEFYlS-1fQcvUMsS2HrrV8pcj3GDFaYmYmeb3vXfMrjGXpViEDVfvLcqI7pJ03pKb_9ldQm-Cj9SlGW2Op8rxArgIhlD6oSLGQQKH9IqH1urPpQ4EAMCs3KOwbzLu57FDKv01PioBJBdR6pqlaxZTJr3HwxOUlFhC9EFyw/s320/thermometer.png" alt="Humidity Icon">
+        <p class="humidity" id="humidity"></p>
+        <span style="position: relative ; left: -2rem;">Humidity</span>
+      </div>
+      <div class="windSpeed">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyaIguDPkbBMnUDQkGp3wLRj_kvd_GIQ4RHQar7a32mUGtwg3wHLIe0ejKqryX8dnJu-gqU6CBnDo47O7BlzCMCwRbB7u0Pj0CbtGwtyhd8Y8cgEMaSuZKrw5-62etXwo7UoY509umLmndsRmEqqO0FKocqTqjzHvJFC2AEEYjUax9tc1JMWxIWAQR4g/s320/wind.png" alt="Wind Speed Icon">
+        <p id="windSpeed"></p>
+        <span style="position: relative ; left: -4.3rem;">Wind Speed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 <script>
-    // load sound via <audio tag
-const audioElement = document.querySelector("audio");
-const audioCtx = new AudioContext();
-const track = audioCtx.createMediaElementSource(audioElement);
+// DOM Selection
+const greetings = document.getElementById('greetings');
+const weatherIcon = document.getElementById('weatherIcon');
+const weather = document.getElementById('weather');
+const desc = document.getElementById('desc');
+const clock = document.getElementById('clock');
+const humidity = document.getElementById('humidity');
+const searchInput = document.querySelector("#searchInput");
+const searchButton = document.querySelector("#searchButton");
 
-// Player controls and attributes
-const playButton = document.querySelector(".player-play-btn");
-const playIcon = playButton.querySelector(".player-icon-play");
-const pauseIcon = playButton.querySelector(".player-icon-pause");
-const progress = document.querySelector(".player-progress");
-const progressFilled = document.querySelector(".player-progress-filled");
-const playerCurrentTime = document.querySelector(".player-time-current");
-const playerDuration = document.querySelector(".player-time-duration");
-const volumeControl = document.querySelector(".player-volume")
+// API Key and Default City
+const API_KEY = "8cf5ac5621c8d0266298a149e49d7514";
+const defaultCity = "puerto rico";
 
-window.addEventListener("load", () => {
-  // Set times after page load
-  setTimes();
+// Function to fetch weather data
+const fetchWeatherData = (city) => {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      setWeatherDetails(data);
+    })
+    .catch(error => {
+      console.error("Error fetching weather data:", error);
+    });
+}
 
-  // Update progress bar and time values as audio plays
-  audioElement.addEventListener("timeupdate", () => {
-    progressUpdate();
-    setTimes();
-  });
-
-  // Play button toggle
-  playButton.addEventListener("click", () => {
-    // check if context is in suspended state (autoplay policy)
-    // By default browsers won't allow you to autoplay audio.
-    // You can overide by finding the AudioContext state and resuming it after a user interaction like a "click" event.
-    if (audioCtx.state === "suspended") {
-      audioCtx.resume();
-    }
-
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-
-      playButton.dataset.playing = "true";
-      playIcon.classList.add("hidden");
-      pauseIcon.classList.remove("hidden");
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-      pauseIcon.classList.add("hidden");
-      playIcon.classList.remove("hidden");
-    }
-  });
-
-  // if the track ends reset the player
-  audioElement.addEventListener("ended", () => {
-    playButton.dataset.playing = "false";
-    pauseIcon.classList.add("hidden");
-    playIcon.classList.remove("hidden");
-    progressFilled.style.flexBasis = "0%";
-    audioElement.currentTime = 0;
-    audioElement.duration = audioElement.duration;
-  });
-
-  // Bridge the gap between gainNode and AudioContext so we can manipulate volume (gain)
-  const gainNode = audioCtx.createGain();
-  const volumeControl = document.querySelector(".player-volume");
-  volumeControl.addEventListener("change", () => {
-    gainNode.gain.value = volumeControl.value;
-  });
-
-  track.connect(gainNode).connect(audioCtx.destination);
-
-  // Display currentTime and duration properties in real time
-  function setTimes() {
-    playerCurrentTime.textContent = new Date(audioElement.currentTime * 1000)
-      .toISOString()
-      .substr(11, 8);
-    playerDuration.textContent = new Date(audioElement.duration * 1000)
-      .toISOString()
-      .substr(11, 8);
+// Function to set weather details
+const setWeatherDetails = (data) => {
+  desc.textContent = data.weather[0].description;
+  weather.textContent = Math.round(data.main.temp - 273.15) + "°c";
+  humidity.textContent = data.main.humidity + "%";
+  document.querySelector(".windSpeed").getElementsByTagName("p")[0].textContent = data.wind.speed + "km/h";
+  switch (data.weather[0].main) {
+    case 'Clouds':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwFTkt5z_dxU6w1UnS1PxiZV3HDiPGsAW5Lrsp09MnlCmkQre9GzO8MnGytaaY1eZoqBN6SMJ4U578_uDtiuXswovr1T3o-Kt5KK0mlN_zC0RDodJFaKHQ3Uk-HIZ3vuMvAKNJi8DDFwWA7F6BOxz78Oh-UePwJTuc3PG0ZIZypPE1xlMPl5z46joaEw/s320/Clouds.png";
+      break;
+    case 'Clear':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7pmzNCftryAfpa1YBSzVeYtjgxDQnw09Ug0HVV47J8GEtHPYTH9hJgZ2M1k0YgE0pcZ1qekr4C14zyPCiVuQAfXLClK8Ww3hYB6v77yElP7Lo5BnUKo4n-w6yB17FAbw51WST6YKS0GMwyA4fYNxOZxEyNL6HhUfFRgVhOW0GyRdBRriMHFQ-qfh4cA/s320/sun.png";
+      break;
+    case 'Rain':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDW_NdwvxV796rkFf43qmUDiTQePn5dg7PDfn1SijfpjtB0AWJMBcifU6LWyW7iOtjZhfqIJnKEGQ1PwbbXS7NoKMSAmvy7i2ljWXMYLue3EBIBBR2qTFbs6QCe5eoFr2CU9WzCVJ8u0J3z3eAo3Ajv1LXamZASFtbj9sA_gD-Kp3hfgAk17Xh17RoLQ/s320/rainy.png";
+      break;
+    case 'Mist':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVpL23l0t1U_ibWi01TFcHMF6J_t-9Ada5PavGlwG4M_mKIcx0pV1md9SN9ip1d84NaVowml5Do16XO3nsuttnM2-Ov05d-wCjEYjdzaOYfKvijw8k6Hfj9pOiPyEZTp2W20EPbTeONTgJE2Rdxs4KZUfg6f2PmbMF1094NcqJ7DwSFUQwYiRmVCNvuA/s320/mist.png";
+      break;
+    case 'Snow':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-P3iT_uQK95qFY4h7QGdEtbRc1aVQo9BZy0ZWyPBvCNrP-4wnRStw0xYj9e4xa4ZlYISeNZqVJ33UP4YukR4jBennDD_obIN4QxYNZHdzG_z6_MNL2U08wMXwdFhtfvitW5LGiHgrwMJFC8QJFqbSO3woGSBqOdagGxaEQ20_S31Gc-GYL4vYzPzaPw/s320/snow.png";
+      break;
+    case 'Haze':
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjld66Ia5g_hpBn3Impi3zzOBHqWkjQInGLxTb2uXksuCsrkQU8HjlVyLobEJEGg8fRSIxeFzldGEHUmWcaiZBwAcRy4dGDpFX1BjTSB56qmBjW5tEW3RSC9_mCuLU_a8RuXchxGY7Oc8HLLl-IfaDW19Z0ZJJfNae9tECXRIyEu7rmJ3da08z8cI-phw/s320/haze.png";
+      break;
   }
+}
 
-  // Update player timeline progress visually
-  function progressUpdate() {
-    const percent = (audioElement.currentTime / audioElement.duration) * 100;
-    progressFilled.style.flexBasis = `${percent}%`;
-  }
+// Function to update clock in real-time
+const updateClock = () => {
+  const date = new Date();
+  let hours = date.getHours();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const seconds = date.getSeconds().toString().padStart(2, '0');
+  clock.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+}
 
-  // Scrub player timeline to skip forward and back on click for easier UX
-  let mousedown = false;
+// Function to update weather and clock periodically
+const updateWeatherAndClock = () => {
+  fetchWeatherData(defaultCity);
+  updateClock();
+}
 
-  function scrub(event) {
-    const scrubTime =
-      (event.offsetX / progress.offsetWidth) * audioElement.duration;
-    audioElement.currentTime = scrubTime;
-  }
+// Call the function initially and set interval for periodic updates
+updateWeatherAndClock();
+setInterval(updateWeatherAndClock, 1000); // Update every second for both weather and clock
+var myDate = new Date();
+var hrs = myDate.getHours();
 
-  progress.addEventListener("click", scrub);
-  progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
-  progress.addEventListener("mousedown", () => (mousedown = true));
-  progress.addEventListener("mouseup", () => (mousedown = false));
+var greet;
 
-  // Track credit: Outfoxing the Fox by Kevin MacLeod under Creative Commons
+if (hrs < 12)
+  greet = 'Good Morning kiara!';
+else if (hrs >= 12 && hrs <= 17)
+  greet = 'Good Afternoon';
+else if (hrs >= 17 && hrs <= 24)
+  greet = 'Good Evening kiara!';
 
-}, false)
+document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';
+
 </script>
 </body>
 </html>
