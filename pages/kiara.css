@@ -117,10 +117,6 @@ body {
   display: flex;
   font-size: 1rem;
   color: #323232;
-  .span{
-    position: relative;
-    right: 2rem;
-  }
 }
 .windDetails .humidityBox img {
   max-height: 2rem;
