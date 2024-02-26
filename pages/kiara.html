@@ -11,8 +11,8 @@
   <div class="greetings"><p id="greetings"></p></div>
   
   <p>this page is specially designed for you ❤</p>
-  <div class="message">
-    <p>Dear Kiara, I hope you feel better soon. Take care of yourself and know that I'm thinking of you.</p>
+  <div class="message" id="message">
+    <!-- Random message will appear here -->
   </div>
 </div>
 
@@ -136,7 +136,23 @@ else if (hrs >= 17 && hrs <= 24)
   greet = 'Good Evening kiara!';
 
 document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';
+const randomMessages = [
+  "Dear Kiara, I hope you feel better soon. Take care of yourself and know that I'm thinking of you.",
+  "You're amazing, Kiara! Keep shining bright!",
+  "Sending you lots of love and positivity, Kiara.",
+  "Hey Kiara, just wanted to remind you how awesome you are!",
+  // Add more messages as needed
+];
 
+// Function to select and display a random message
+const displayRandomMessage = () => {
+  const messageContainer = document.getElementById('message');
+  const randomIndex = Math.floor(Math.random() * randomMessages.length);
+  messageContainer.textContent = randomMessages[randomIndex];
+}
+
+// Call the function to display a random message when the page loads
+displayRandomMessage();
 </script>
 </body>
 </html>
