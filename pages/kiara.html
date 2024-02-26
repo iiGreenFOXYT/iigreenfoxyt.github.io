@@ -104,13 +104,10 @@ const setWeatherDetails = (data) => {
 
 // Function to update clock in real-time
 const updateClock = () => {
-  const date = new Date();
-  let hours = date.getHours();
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12;
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const seconds = date.getSeconds().toString().padStart(2, '0');
-  clock.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+  const date = new Date().toLocaleString("en-US", {timeZone: "America/Puerto_Rico"});
+  const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+  const formattedTime = new Intl.DateTimeFormat('en-US', options).format(new Date(date));
+  clock.textContent = formattedTime;
 }
 
 // Function to update weather and clock periodically
