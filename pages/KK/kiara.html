@@ -16,7 +16,7 @@
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <h2>Install Kiara App</h2>
     <p>Add Kiara to your home screen for quick access.</p>
-    <button onclick="installApp()">Install as App</button>
+    <button onclick="installApp()" id="btnAdd">Install as App</button>
   </div>
 </div>
 
@@ -169,9 +169,10 @@ const displayRandomMessage = () => {
 // Call the function to display a random message when the page loads
 displayRandomMessage();
 </script>
-<script src="/pages/KK/kk.js"></script>
-<link rel="manifest" href="/manifest.json">
+
 <script>
+  let deferredPrompt;
+
   window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
@@ -196,6 +197,7 @@ displayRandomMessage();
   });
 </script>
 
+
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -209,6 +211,6 @@ displayRandomMessage();
     });
   }
 </script>
-
+<script src="/pages/KK/kk.js"></script>
 </body>
 </html>
