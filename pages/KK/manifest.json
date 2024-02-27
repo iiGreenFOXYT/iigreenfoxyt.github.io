@@ -5,7 +5,11 @@
       {
         "src": "/assets/KK.png",
         "sizes": "192x192",
+<<<<<<< HEAD
         "type": "image/png"
+=======
+        "type": "KK/png"
+>>>>>>> 944749a6a6c0b508cc565bb12e12f3ca9661fac2
       },
       {
         "src": "/assets/KK.png",
