@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/pages/kiara.css">
+<link rel="icon" href="/assets/KK.png" type="image/x-icon">
+<link rel="stylesheet" href="/pages/KK/kiara.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kiara</title>
 </head>
 <body>
+
+  <!-- Install Popup -->
+<div class="install-popup" id="installPopup">
+  <div class="install-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Install Kiara App</h2>
+    <p>Add Kiara to your home screen for quick access.</p>
+    <button onclick="installApp()">Install as App</button>
+  </div>
+</div>
+
 <div class="container">
   <div class="greetings"><p id="greetings"></p></div>
   
@@ -155,6 +167,32 @@ const displayRandomMessage = () => {
 
 // Call the function to display a random message when the page loads
 displayRandomMessage();
+</script>
+<script src="/pages/KK/kk.js"></script>
+<link rel="manifest" href="/manifest.json">
+<script>
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later
+    deferredPrompt = e;
+    // Update UI to notify the user they can add to home screen
+    btnAdd.style.display = 'block';
+  });
+
+  btnAdd.addEventListener('click', (e) => {
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
 </script>
 </body>
 </html>

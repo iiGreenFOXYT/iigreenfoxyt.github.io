@@ -1,0 +1,21 @@
+{
+    "name": "Kiara Motivate",
+    "short_name": "Kiara",
+    "icons": [
+      {
+        "src": "/assets/KK.png",
+        "sizes": "192x192",
+        "type": "KK/png"
+      },
+      {
+        "src": "/assets/KK.png",
+        "sizes": "512x512",
+        "type": "/assets/KK.png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
+  }
+  
