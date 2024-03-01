@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/assets/KK.png" type="image/x-icon">
-<link rel="stylesheet" href="/pages/KK/kiara.css">
-<link rel="manifest" href="/manifest.json">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kiara</title>
-</head>
-<body>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/assets/KK.png" type="image/x-icon">
+  <link rel="stylesheet" href="/pages/KK/kiara.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiara</title>
+  </head>
+  <body>
 
-  <!-- Install Popup -->
-<div class="install-popup" id="installPopup">
-  <div class="install-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>Install Kiara App</h2>
-    <p>Add Kiara to your home screen for quick access.</p>
-    <button onclick="installApp()" id="btnAdd">Install as App</button>
+<!-- Install Popup 
+  <div class="install-popup" id="installPopup">
+    <div class="install-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Install Kiara App</h2>
+      <p>Add Kiara to your home screen for quick access.</p>
+      <button onclick="installApp()" id="btnAdd">Install as App</button>
+    </div>
   </div>
-</div>
-
-<div class="container">
-  <div class="greetings"><p id="greetings"></p></div>
+-->
+  <div class="container">
+    <div class="greetings"><p id="greetings"></p></div>
   
-  <p>this page is specially designed for you ❤</p>
-  <div class="message" id="message">
-    <!-- Random message will appear here -->
+    <p>this page is specially designed for you ❤</p>
+    <div class="message" id="message">
+      <!-- Random message will appear here -->
+    </div>
   </div>
-</div>
 
 <div class="mainContainer">
   <h1 style="text-align: center; color: black; position: relative; border-top-right-radius: 1rem; border-top-left-radius: 1rem; background-color: bisque;">puerto rico weather & Time</h1>
@@ -140,7 +140,7 @@ var greet;
 if (hrs < 12)
   greet = 'Good Morning kiara!';
 else if (hrs >= 12 && hrs <= 17)
-  greet = 'Good Afternoon';
+  greet = 'Good Afternoon Kiara!';
 else if (hrs >= 17 && hrs <= 24)
   greet = 'Good Evening kiara!';
 
