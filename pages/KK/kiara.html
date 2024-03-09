@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="/assets/KK.png" type="image/x-icon">
-  <link rel="stylesheet" href="/pages/KK/kiara.css">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kiara</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/assets/KK.png" type="image/x-icon">
+<link rel="stylesheet" href="/pages/KK/kiara.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiara</title>
+</head>
+<body>
 
-<!-- Install Popup 
-  <div class="install-popup" id="installPopup">
-    <div class="install-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h2>Install Kiara App</h2>
-      <p>Add Kiara to your home screen for quick access.</p>
-      <button onclick="installApp()" id="btnAdd">Install as App</button>
-    </div>
+<div class="container">
+  <div class="greetings"><p id="greetings"></p></div>
+
+  <p>this page is specially designed for you ❤</p>
+  <div class="message" id="message">
+    <!-- Random message will appear here -->
   </div>
--->
-  <div class="container">
-    <div class="greetings"><p id="greetings"></p></div>
-  
-    <p>this page is specially designed for you ❤</p>
-    <div class="message" id="message">
-      <!-- Random message will appear here -->
-    </div>
-  </div>
+</div>
 
 <div class="mainContainer">
-  <h1 style="text-align: center; color: black; position: relative; border-top-right-radius: 1rem; border-top-left-radius: 1rem; background-color: bisque;">puerto rico weather & Time</h1>
+  <h1 style="text-align: center; color: black; position: relative; border-top-right-radius: 1rem; border-top-left-radius: 1rem; background-color: bisque;">Puerto Rico Weather & Time</h1>
   <div class="weatherDetails">
     <div class="weatherIcon">
       <img src="Images/sun.png" alt="Weather Icon" id="weatherIcon">
@@ -38,18 +28,18 @@
     <div class="cityDetails">
       <div class="weather" id="weather"></div>
       <div class="desc" id="desc"></div>
-      <div class="clock" id="clock"></div>
+      <div class="clock" id="clock" style="color: #323232;"></div>
     </div>
     <div class="windDetails">
       <div class="humidityBox">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgr7XehXJkOPXbZr8xL42sZEFYlS-1fQcvUMsS2HrrV8pcj3GDFaYmYmeb3vXfMrjGXpViEDVfvLcqI7pJ03pKb_9ldQm-Cj9SlGW2Op8rxArgIhlD6oSLGQQKH9IqH1urPpQ4EAMCs3KOwbzLu57FDKv01PioBJBdR6pqlaxZTJr3HwxOUlFhC9EFyw/s320/thermometer.png" alt="Humidity Icon">
+        <img  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgr7XehXJkOPXbZr8xL42sZEFYlS-1fQcvUMsS2HrrV8pcj3GDFaYmYmeb3vXfMrjGXpViEDVfvLcqI7pJ03pKb_9ldQm-Cj9SlGW2Op8rxArgIhlD6oSLGQQKH9IqH1urPpQ4EAMCs3KOwbzLu57FDKv01PioBJBdR6pqlaxZTJr3HwxOUlFhC9EFyw/s320/thermometer.png" alt="Humidity Icon">
         <p class="humidity" id="humidity"></p>
-        <span style="position: relative ; left: -2rem;">Humidity</span>
+        <span style="position: relative ; left: -2rem;">Humidity:</span>
       </div>
       <div class="windSpeed">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyaIguDPkbBMnUDQkGp3wLRj_kvd_GIQ4RHQar7a32mUGtwg3wHLIe0ejKqryX8dnJu-gqU6CBnDo47O7BlzCMCwRbB7u0Pj0CbtGwtyhd8Y8cgEMaSuZKrw5-62etXwo7UoY509umLmndsRmEqqO0FKocqTqjzHvJFC2AEEYjUax9tc1JMWxIWAQR4g/s320/wind.png" alt="Wind Speed Icon">
         <p id="windSpeed"></p>
-        <span style="position: relative ; left: -2.8rem;">Wind Speed</span>
+        <span style="position: relative ; left: -3.7rem; width: 100px;">Wind Speed:</span>
       </div>
     </div>
   </div>
@@ -110,17 +100,28 @@ const setWeatherDetails = (data) => {
       weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-P3iT_uQK95qFY4h7QGdEtbRc1aVQo9BZy0ZWyPBvCNrP-4wnRStw0xYj9e4xa4ZlYISeNZqVJ33UP4YukR4jBennDD_obIN4QxYNZHdzG_z6_MNL2U08wMXwdFhtfvitW5LGiHgrwMJFC8QJFqbSO3woGSBqOdagGxaEQ20_S31Gc-GYL4vYzPzaPw/s320/snow.png";
       break;
     case 'Haze':
-      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjld66Ia5g_hpBn3Impi3zzOBHqWkjQInGLxTb2uXksuCsrkQU8HjlVyLobEJEGg8fRSIxeFzldGEHUmWcaiZBwAcRy4dGDpFX1BjTSB56qmBjW5tEW3RSC9_mCuLU_a8RuXchxGY7Oc8HLLl-IfaDW19Z0ZJJfNae9tECXRIyEu7rmJ3da08z8cI-phw/s320/haze.png";
+      weatherIcon.src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjld66Ia5g_hpBn3Impi3zzOBHqWkjQInGLxTb2uXksuCsrkQU8HjlVyLobEJEGg8fRSIxeFzldGEHmZcaiZBwAcRy4dGDpFX1BjTSB56qmBjW5tEW3RSC9_mCuLU_a8RuXchxGY7Oc8HLLl-IfaDW19Z0ZJJfNae9tECXRIyEu7rmJ3da08z8cI-phw/s320/haze.png";
       break;
   }
 }
 
-// Function to update clock in real-time
+// Function to update clock in real-time for Puerto Rico time
 const updateClock = () => {
   const date = new Date().toLocaleString("en-US", {timeZone: "America/Puerto_Rico"});
   const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
   const formattedTime = new Intl.DateTimeFormat('en-US', options).format(new Date(date));
   clock.textContent = formattedTime;
+
+  // Adjust greetings based on Puerto Rico time
+  const hrs = new Date(date).getHours();
+  if (hrs < 12)
+    greet = 'Good Morning kiara!';
+  else if (hrs >= 12 && hrs <= 17)
+    greet = 'Good Afternoon Kiara!';
+  else if (hrs >= 17 && hrs <= 24)
+    greet = 'Good Evening kiara!';
+
+  document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';
 }
 
 // Function to update weather and clock periodically
@@ -131,20 +132,9 @@ const updateWeatherAndClock = () => {
 
 // Call the function initially and set interval for periodic updates
 updateWeatherAndClock();
-setInterval(updateWeatherAndClock, 1000); // Update every second for both weather and clock
-var myDate = new Date();
-var hrs = myDate.getHours();
+setInterval(updateWeatherAndClock, 1000);// Update every second for both weather and clock
 
-var greet;
 
-if (hrs < 12)
-  greet = 'Good Morning kiara!';
-else if (hrs >= 12 && hrs <= 17)
-  greet = 'Good Afternoon Kiara!';
-else if (hrs >= 17 && hrs <= 24)
-  greet = 'Good Evening kiara!';
-
-document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';
 const randomMessages = [
   "Dear Kiara, I hope you feel better soon. Take care of yourself and know that I'm thinking of you.",
   "You're amazing, Kiara! Keep shining bright!",
@@ -168,49 +158,9 @@ const displayRandomMessage = () => {
 
 // Call the function to display a random message when the page loads
 displayRandomMessage();
+
 </script>
 
-<script>
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent Chrome 67 and earlier from automatically showing the prompt
-    e.preventDefault();
-    // Stash the event so it can be triggered later
-    deferredPrompt = e;
-    // Update UI to notify the user they can add to home screen
-    btnAdd.style.display = 'block';
-  });
-
-  btnAdd.addEventListener('click', (e) => {
-    // Show the prompt
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      deferredPrompt = null;
-    });
-  });
-</script>
-
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(function(registration) {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch(function(err) {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-  }
-</script>
 <script src="/pages/KK/kk.js"></script>
 </body>
 </html>
